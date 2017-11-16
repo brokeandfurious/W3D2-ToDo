@@ -13,6 +13,7 @@
 		9DBCCC2A1FBB83F0005206C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DBCCC291FBB83F0005206C1 /* Assets.xcassets */; };
 		9DBCCC2D1FBB83F0005206C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DBCCC2B1FBB83F0005206C1 /* LaunchScreen.storyboard */; };
 		9DBCCC301FBB83F0005206C1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DBCCC2F1FBB83F0005206C1 /* main.m */; };
+		9DEBE40A1FBD532C00470020 /* Todo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBE4091FBD532C00470020 /* Todo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		9DBCCC2C1FBB83F0005206C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9DBCCC2E1FBB83F0005206C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DBCCC2F1FBB83F0005206C1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9DEBE4081FBD532C00470020 /* Todo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Todo.h; sourceTree = "<group>"; };
+		9DEBE4091FBD532C00470020 /* Todo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Todo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				9DBCCC2B1FBB83F0005206C1 /* LaunchScreen.storyboard */,
 				9DBCCC2E1FBB83F0005206C1 /* Info.plist */,
 				9DBCCC2F1FBB83F0005206C1 /* main.m */,
+				9DEBE4081FBD532C00470020 /* Todo.h */,
+				9DEBE4091FBD532C00470020 /* Todo.m */,
 			);
 			path = "W3D2 - AnyDo";
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 				9DBCCC251FBB83F0005206C1 /* ViewController.m in Sources */,
 				9DBCCC301FBB83F0005206C1 /* main.m in Sources */,
 				9DBCCC221FBB83F0005206C1 /* AppDelegate.m in Sources */,
+				9DEBE40A1FBD532C00470020 /* Todo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

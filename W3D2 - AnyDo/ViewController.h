@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Todo.h"
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *topHeaderLabel;
+@property (weak, nonatomic) IBOutlet UITextField *todoTextField;
+@property (weak, nonatomic) IBOutlet UITableView *todoTableView;
 
 @end
 
