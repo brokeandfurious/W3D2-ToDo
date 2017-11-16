@@ -19,25 +19,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self tempArraySetup];
+//    [self tempArraySetup];
+    [self todos];
 }
-
-- (void) tempArraySetup {
-    self.todoArray = [NSMutableArray arrayWithObjects: @"Rescue puppies", @"Sacrifice your soul to satan", nil];
+//
+//- (void) tempArraySetup {
+//    self.todoArray = [NSMutableArray arrayWithObjects: @"Rescue puppies", @"Sacrifice your soul to satan", nil];
 //    Todo *newTodo = [[Todo alloc] initWithTodoProperties:@"Do this" Description:@"test" Priority:2 isCompleted:NO];
 //    [self.todoArray addObject:newTodo];
-    NSLog(@"Test array: %@", _todoArray);
-}
+//    NSLog(@"Test array: %@", _todoArray);
+//}
 
 - (NSMutableArray <Todo*>*)todos {
-    if (_todoArray == nil){
-        _todoArray = [[NSMutableArray alloc]init];
-        [_todoArray addObject:[[Todo alloc] initWithTodoProperties:@"Get milk" Description:@"Test" Priority:2 isCompleted:NO]];
-        [_todoArray addObject:[[Todo alloc] initWithTodoProperties:@"Get food" Description:@"Test" Priority:1 isCompleted:NO]];
-        [_todoArray addObject:[[Todo alloc] initWithTodoProperties:@"Get water" Description:@"Test" Priority:1 isCompleted:NO]];
-        NSLog(@"Array test: %@", _todoArray);
+    if (self.todoArray == nil){
+        self.todoArray = [[NSMutableArray alloc]init];
+        [self.todoArray addObject:[[Todo alloc] initWithTodoProperties:@"Get milk" Description:@"Test" Priority:2 isCompleted:NO]];
+        [self.todoArray addObject:[[Todo alloc] initWithTodoProperties:@"Get food" Description:@"Test" Priority:1 isCompleted:NO]];
+        [self.todoArray addObject:[[Todo alloc] initWithTodoProperties:@"Get water" Description:@"Test" Priority:1 isCompleted:NO]];
+        NSLog(@"Array test: %@", self.todoArray);
     }
-    return _todoArray;
+    return self.todoArray;
 }
 
 #pragma mark - UITableView DataSource Methods
@@ -53,14 +54,14 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellID = @"cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
-    cell.textLabel.text = _todoArray[indexPath.row];
+    cell.textLabel.text = _todoArray[indexPath.row].todoTitle;
     return cell;
 }
 
 - (void) tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [_todoArray removeObjectAtIndex:indexPath];
+        [_todoArray removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
     
