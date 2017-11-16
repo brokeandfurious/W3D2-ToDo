@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "Todo.h"
+#import "ExpandedCellViewController.h"
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -19,23 +21,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    [self tempArraySetup];
     [self todos];
 }
-//
-//- (void) tempArraySetup {
-//    self.todoArray = [NSMutableArray arrayWithObjects: @"Rescue puppies", @"Sacrifice your soul to satan", nil];
-//    Todo *newTodo = [[Todo alloc] initWithTodoProperties:@"Do this" Description:@"test" Priority:2 isCompleted:NO];
-//    [self.todoArray addObject:newTodo];
-//    NSLog(@"Test array: %@", _todoArray);
-//}
 
 - (NSMutableArray <Todo*>*)todos {
     if (self.todoArray == nil){
         self.todoArray = [[NSMutableArray alloc]init];
-        [self.todoArray addObject:[[Todo alloc] initWithTodoProperties:@"Get milk" Description:@"Test" Priority:2 isCompleted:NO]];
-        [self.todoArray addObject:[[Todo alloc] initWithTodoProperties:@"Get food" Description:@"Test" Priority:1 isCompleted:NO]];
-        [self.todoArray addObject:[[Todo alloc] initWithTodoProperties:@"Get water" Description:@"Test" Priority:1 isCompleted:NO]];
+        [self.todoArray addObject:[[Todo alloc] initWithTodoProperties:@"Pet puppies" Description:@"Pretty self explanatory" Priority:4 isCompleted:NO]];
+        [self.todoArray addObject:[[Todo alloc] initWithTodoProperties:@"Sacrifice your soul to Satan" Description:@"Self explanatory" Priority:1 isCompleted:NO]];
+        [self.todoArray addObject:[[Todo alloc] initWithTodoProperties:@"Swallow gum" Description:@"Why not?" Priority:1 isCompleted:NO]];
         NSLog(@"Array test: %@", self.todoArray);
     }
     return self.todoArray;
@@ -65,6 +59,15 @@
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
     
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(UITableViewCell *)sender {
+    ExpandedCellViewController *expandedCellViewController = segue.destinationViewController;
+    NSIndexPath *cellIndex = [self.todoTableView indexPathForSelectedRow];
+    expandedCellViewController.todoLabelOnTheSecondViewController = self.todoArray[cellIndex.row].todoTitle;
+    expandedCellViewController.descLabelOnTheSecondViewController = self.todoArray[cellIndex.row].todoDescription;
+    expandedCellViewController.expandedPriority = self.todoArray[cellIndex.row].todoPriority;
+    NSLog(@"Segue finished successfully.");
 }
 
 @end

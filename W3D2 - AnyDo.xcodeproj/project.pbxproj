@@ -14,6 +14,8 @@
 		9DBCCC2D1FBB83F0005206C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DBCCC2B1FBB83F0005206C1 /* LaunchScreen.storyboard */; };
 		9DBCCC301FBB83F0005206C1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DBCCC2F1FBB83F0005206C1 /* main.m */; };
 		9DEBE40A1FBD532C00470020 /* Todo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBE4091FBD532C00470020 /* Todo.m */; };
+		9DEBE4911FBE48F500470020 /* TodoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBE4901FBE48F500470020 /* TodoViewCell.m */; };
+		9DEBE4971FBE49EE00470020 /* ExpandedCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBE4961FBE49EE00470020 /* ExpandedCellViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,10 @@
 		9DBCCC2F1FBB83F0005206C1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9DEBE4081FBD532C00470020 /* Todo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Todo.h; sourceTree = "<group>"; };
 		9DEBE4091FBD532C00470020 /* Todo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Todo.m; sourceTree = "<group>"; };
+		9DEBE48F1FBE48F500470020 /* TodoViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodoViewCell.h; sourceTree = "<group>"; };
+		9DEBE4901FBE48F500470020 /* TodoViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodoViewCell.m; sourceTree = "<group>"; };
+		9DEBE4951FBE49EE00470020 /* ExpandedCellViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExpandedCellViewController.h; sourceTree = "<group>"; };
+		9DEBE4961FBE49EE00470020 /* ExpandedCellViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExpandedCellViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +71,10 @@
 				9DBCCC211FBB83F0005206C1 /* AppDelegate.m */,
 				9DBCCC231FBB83F0005206C1 /* ViewController.h */,
 				9DBCCC241FBB83F0005206C1 /* ViewController.m */,
+				9DEBE4951FBE49EE00470020 /* ExpandedCellViewController.h */,
+				9DEBE4961FBE49EE00470020 /* ExpandedCellViewController.m */,
+				9DEBE48F1FBE48F500470020 /* TodoViewCell.h */,
+				9DEBE4901FBE48F500470020 /* TodoViewCell.m */,
 				9DBCCC261FBB83F0005206C1 /* Main.storyboard */,
 				9DBCCC291FBB83F0005206C1 /* Assets.xcassets */,
 				9DBCCC2B1FBB83F0005206C1 /* LaunchScreen.storyboard */,
@@ -149,8 +159,10 @@
 			files = (
 				9DBCCC251FBB83F0005206C1 /* ViewController.m in Sources */,
 				9DBCCC301FBB83F0005206C1 /* main.m in Sources */,
+				9DEBE4911FBE48F500470020 /* TodoViewCell.m in Sources */,
 				9DBCCC221FBB83F0005206C1 /* AppDelegate.m in Sources */,
 				9DEBE40A1FBD532C00470020 /* Todo.m in Sources */,
+				9DEBE4971FBE49EE00470020 /* ExpandedCellViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

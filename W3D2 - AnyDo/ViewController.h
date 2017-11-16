@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Todo.h"
+#import "ExpandedCellViewController.h"
 
 @interface ViewController : UIViewController
 

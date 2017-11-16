@@ -7,6 +7,7 @@
 //
 
 #import "Todo.h"
+#import "ExpandedCellViewController.h"
 
 @implementation Todo
 
